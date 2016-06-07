@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <base href="/">
+  <meta name="viewport" content="width=device-width">
+
+  <title>ng-project</title>
+  <link rel="stylesheet" href="./assets/stylesheets/style.css">
+  <script src="https://use.fontawesome.com/ed52e5dd54.js"></script>
+  <script src='./app/pdf/pdfmake.min.js'></script>
+  <script src='./app/pdf/vfs_fonts.js'></script>
+
+
+  <!-- 1. Load libraries -->
+  <!-- IE required polyfills, in this exact order -->
+  <script src="node_modules/es6-shim/es6-shim.min.js"></script>
+
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+  <!-- 2. Configure SystemJS -->
+  <script src="systemjs.config.js"></script>
+  <script>
+    System.import('app').catch(function(err){ console.error(err); });
+  </script>
+
+</head>
+
+<!-- 3. Display the application -->
+
+<body>
+  <my-app>
+    <i class="fa fa-spinner fa-pulse fa-4x" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)"></i>
+  </my-app>
+</body>
+
+</html>

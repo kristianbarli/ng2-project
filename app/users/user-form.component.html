@@ -1,0 +1,38 @@
+<h1>{{ title }}</h1>
+<form [ngFormModel]="form">
+
+    <div>
+        <input [(ngModel)]="user.name" type="text" placeholder="Name" ngControl="name" #username="ngForm">
+        <div *ngIf="username.touched && username.errors">
+            <div *ngIf="username.errors.required" class="alert">Name required.</div>
+            <div *ngIf="username.errors.spaces" class="alert">Please provide first and last name.</div>
+        </div>
+
+    </div>
+    <div>
+        <input [(ngModel)]="user.email" type="email" placeholder="Email" ngControl="email" #email="ngForm">
+        <div *ngIf="email.touched && email.errors" >
+            <div *ngIf="email.errors.required" class="alert">Email required.</div>
+            <div *ngIf="email.errors.isNotEmail" class="alert">Email not valid.</div>
+        </div>
+
+    </div>
+    <!--<div>
+        <input [(ngModel)]="user.phone" type="text" placeholder="Phone" ngControl="phone">
+    </div>
+    <div><h3>Address</h3></div>
+    <div>
+        <input [(ngModel)]="user.street" type="text" placeholder="Street" ngControl="street">
+    </div>
+    <div>
+        <input [(ngModel)]="user.suite" type="text" placeholder="Suite" ngControl="suite">
+    </div>
+    <div>
+        <input [(ngModel)]="user.city" type="text" placeholder="City" ngControl="city">
+    </div>
+    <div>
+        <input [(ngModel)]="user.zipcode" type="text" placeholder="Zip" ngControl="zipcode">
+    </div>-->
+    <button *ngIf="!id" [disabled]="!form.valid" (click)="newUser()">Create User</button>
+    <button *ngIf="id" (click)="editUser()">Save Edit</button>
+</form>

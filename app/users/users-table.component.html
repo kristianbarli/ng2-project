@@ -1,0 +1,40 @@
+
+<div class="container">
+
+<div class="row">
+    <div class="col-7">
+        <h1>Users</h1>
+    </div>
+    <div class="col-5">
+        <label><i class="fa fa-search"></i></label>
+        <input style="width: 70%" type="text" [(ngModel)]="term" placeholder="Search">
+    </div>
+</div>
+
+
+<table>
+    <tr>
+        <th class="table-id">ID</th>
+        <th class="table-name">Name</th>
+        <th class="table-email">Email</th>
+        <th class="table-edit">Edit</th>
+        <th class="table-delete">Delete</th>
+    </tr>
+    <tr *ngFor="let user of users | search: [term]">
+        <td class="table-id">{{user.id}}</td>
+        <td class="table-name">{{user.name}}</td>
+        <td class="table-email">{{user.email}}</td>
+        <td class="table-edit"><i (click)="editUser(user)" class="fa fa-pencil-square-o" aria-hidden="true"></i></td>
+        <td class="table-delete"><i (click)="deleteUser(user)" class="fa fa-times" aria-hidden="true"></i></td>
+    </tr>
+</table>
+
+<div *ngIf="!users" style="margin: 30px auto; text-align:center">
+    <i class="fa fa-spinner fa-pulse fa-3x"></i>
+</div>
+
+<div class="add-user-div">
+    <a [routerLink]="['./new']"><i class="fa fa-user"></i> New User</a>
+</div>
+
+</div>

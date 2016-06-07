@@ -1,0 +1,215 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:200,300,700);
+
+html, body {
+    margin:0;
+    padding:0;
+}
+
+.body {
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #2196F3;
+}
+
+.navbar ul {
+    position: relative;
+    height: 100%;
+    margin-left: 0px;
+}
+
+.navbar ul a li {
+    display: inline;
+    list-style: none;
+    padding: 30px;
+    color: #FFF;
+    font-family: "raleway";
+    font-weight: 300;
+    font-size: 1.2em;
+    transition: all 0.125s ease-in-out;
+    letter-spacing: 2px;
+}
+
+.navbar ul a li:hover {
+    background-color: #fff;
+    color: #2196F3;
+    cursor: pointer;
+}
+
+#brand {
+    font-size: 1.6em;
+    letter-spacing: 5px;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: #fff;
+    transition: al 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #2196F3
+}
+
+.active {
+    background-color: #1976D2;
+    box-shadow: 0 4px 3px rgba(0,0,0,0.5)
+}
+
+.container {
+    margin: 30px auto;
+    font-family: "raleway";
+    font-weight: 300;
+    width: 80%;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+    border-bottom: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 18px;
+    text-align: left;
+}
+
+tr:hover:not(:first-child) {
+    background-color: #eee;
+    cursor: default;
+}
+
+th {
+    font-weight: 700;
+}
+
+i {
+    cursor: pointer;
+}
+
+.table-name, table-email {
+    width: 35%;
+}
+
+.table-edit, .table-delete, .table-id {
+    width: 10%;
+    text-align: center;
+}
+
+.table-delete i {
+    color: #b71c1c;
+    transition: all 0.1s ease-in-out;
+}
+
+.table-edit i {
+    transition: all 0.1s ease-in-out;
+}
+
+.table-delete i:hover {
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.table-edit i:hover {
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+
+.add-user-div a {
+    padding: 20px;
+    background-color: #2196F3;
+    color: #fff;
+    box-shadow: 2px 2px 2px #999; 
+    transition: all 0.125s ease-in-out;
+    position: fixed;
+    top: 250px;
+    left: 5%;
+}
+
+.add-user-div a:hover {
+    box-shadow: 4px 4px 8px #999;
+}
+
+
+input {
+    width: 300px;
+    margin: 0px 0 10px 0;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    transition: all 0.125s ease-in-out;
+    font-size: 1.2em;
+    font-weight: 200;
+}
+
+input:focus {
+    border: none;
+    border-bottom: 1px solid #2196F3;
+    outline: none;
+}
+
+button {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    box-shadow: 2px 2px 2px #999; 
+    transition: all 0.125s ease-in-out;
+    font-family: "raleway";
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:disabled {
+    box-shadow: none !important;
+    cursor: not-allowed !important;
+    background-color: #64B5F6 !important;
+    opacity: 0.5
+}
+
+button:hover {
+    box-shadow: 4px 4px 8px #999;
+}
+
+button:focus {
+    outline-style: none;
+    outline-color: transparent;
+}
+
+.alert {
+    color: red;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.col-7 {
+    min-width: 58.3333333%;
+}
+
+.col-5 {
+    min-width: 41.6666666%;
+    position: relative;
+    top: 20px;
+}
+
+.row {
+    margin-top: 20px;
+}
+
+.row [class^="col"], .row [class*=" col"] {
+    float: left;
+    
+}

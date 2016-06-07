@@ -1,0 +1,19 @@
+<nav>
+    <div class="navbar">
+        <ul>
+            <a [routerLink]="['/']">
+                <li id="brand">ngProject</li>
+            </a>
+            <a [routerLink]="['/users']">
+                <li [ngClass]="{active: setActive('users')}" >Users</li>
+            </a>
+            <a [routerLink]="['/posts']">
+                <li [ngClass]="{active: setActive('posts')}">Posts</li>
+            </a>
+            <a [routerLink]="['/pdf']">
+                <li [ngClass]="{active: setActive('pdf')}">PDF</li>
+            </a>
+        </ul>
+    </div>
+</nav>
+
